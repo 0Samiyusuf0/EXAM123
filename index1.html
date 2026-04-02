@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Car Rental Pvt Ltd.</title>
+    <link rel="stylesheet" href="main1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="brand-title">Easy Car<br>Rental Pvt Ltd.</div>
+            <div class="brand-subtitle">with Our <strong>Hassle-Free</strong><br>Car Rentals</div>
+            <div class="car-wrap">
+                <!-- Замени src на путь к твоему изображению джипа -->
+                <img src="./35c4e953817ccaa590bf31ccfea629c2ec882134.png" alt="Car">
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="login-title">Login To Your Acount</div>
+            <div class="login-desc">
+                'Seamless access to your journey begins here.
+                Log in to your car rental account and hit
+                the road with ease!'
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="UserName">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="forgot">
+                <a href="#">Forgot Your Password?</a>
+            </div>
+            <a class="btn-signin" href="./index2.html">Sign-In</a>
+            <div class="signup-text">
+                Start your journey with us. <a href="#">SignUp</a>
+            </div>
+            <!-- BACKGROUND SWITCHER -->
+<div style="position:fixed; bottom:18px; right:18px; display:flex; flex-direction:column; gap:7px; z-index:999;">
+    <button onclick="setbg('')"        style="background:#d0d0d8; border:none; padding:7px 13px; border-radius:6px; cursor:pointer; font-size:12px;">Light</button>
+    <button onclick="setbg('bg-dark')" style="background:#1a1a2e; color:#fff; border:none; padding:7px 13px; border-radius:6px; cursor:pointer; font-size:12px;">Dark</button>
+    <button onclick="setbg('bg-purple')" style="background:#7b2abf; color:#fff; border:none; padding:7px 13px; border-radius:6px; cursor:pointer; font-size:12px;">Purple</button>
+    <button onclick="setbg('bg-blue')" style="background:#302b63; color:#fff; border:none; padding:7px 13px; border-radius:6px; cursor:pointer; font-size:12px;">Blue</button>
+    <button onclick="setbg('bg-sunset')" style="background:#0f3460; color:#fff; border:none; padding:7px 13px; border-radius:6px; cursor:pointer; font-size:12px;">Sunset</button>
+    <button onclick="setbg('bg-black')" style="background:#0d0d0d; color:#fff; border:none; padding:7px 13px; border-radius:6px; cursor:pointer; font-size:12px;">Black</button>
+    <input type="color" value="#d0d0d8" onchange="customBg(this.value)" title="Custom color" style="width:40px; height:30px; border:none; border-radius:6px; cursor:pointer;">
+</div>
+
+<script>
+    const themes = ['bg-dark','bg-light','bg-purple','bg-blue','bg-sunset','bg-black','bg-white','bg-custom'];
+
+    function setbg(cls) {
+        document.body.classList.remove(...themes);
+        document.body.style.background = '';
+        if (cls) document.body.classList.add(cls);
+    }l
+
+    function customBg(color) {
+        document.body.classList.remove(...themes);
+        document.body.style.background = color;
+    }
+</script>
+        </div>
+    </div>
+</body>
+</html>

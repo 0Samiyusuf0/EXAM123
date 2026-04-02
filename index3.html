@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deals – Easy Car Rental Pvt Ltd</title>
+  <link rel="stylesheet" href="main3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="logo-circle">
+        <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'"/>
+        <span class="logo-text-fallback">ECR</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#deals">Deals</a></li>
+      <li><a href="#reservations">Reservations</a></li>
+    </ul>
+    <div class="nav-auth">
+      <i class="fas fa-user-circle nav-user-icon"></i>
+      <a href="#" class="nav-login">login</a>
+      <span class="nav-divider">|</span>
+      <a href="#" class="nav-signup">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Navigate Life's<br/>Highways</h1>
+      <p class="hero-subtitle">with Our <strong>Hassle-Free</strong><br/>Car Rentals</p>
+      <div class="hero-btns">
+        <a href="#deals" class="btn-primary">Find a Car &nbsp;→</a>
+        <a href="#about" class="btn-secondary">Learn More &nbsp;→</a>
+      </div>
+    </div>
+    <div class="hero-car">
+      <img src="84ee3aacaeb37f809a816705f4fc825fe347fdb5.png" alt="BMW i8" class="car-img" onerror="this.style.opacity='0.3'"/>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES BAR ===== -->
+  <section class="features-bar">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <img src="29ca5ae424d93f4da037f86bed7e3932604e37a3.png" alt="agent" onerror="this.innerHTML='👤'"/>
+      </div>
+      <div class="feature-sep"></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon red">
+        <img src="c0b110524782d42e6b24d2c6de9466b1e68e46a8.png" alt="car" onerror="this.innerHTML='🚗'"/>
+      </div>
+      <div class="feature-sep"></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon orange">
+        <img src="f0ab15e1652cf9676bb65eaaca5d7cebe27f71f6.png" alt="steering" onerror="this.innerHTML='🚕'"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS STEPS ===== -->
+  <section class="process-steps" id="about">
+    <div class="step">
+      <div class="step-dot"></div>
+      <p>User Registration and<br/>Profile Management</p>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+      <div class="step-dot"></div>
+      <p>Car Selection and<br/>Booking</p>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+      <div class="step-dot"></div>
+      <p>Effortless Rental<br/>Process</p>
+    </div>
+  </section>
+
+  <!-- ===== SEARCH & FILTER ===== -->
+  <section class="search-bar-section" id="cars">
+    <div class="search-input-wrap">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInput" placeholder="Search" class="search-input" oninput="filterCars()"/>
+      <button class="filter-btn">Filter <i class="fas fa-filter"></i></button>
+    </div>
+    <select class="type-select" id="typeSelect" onchange="filterCars()">
+      <option value="">Select Type</option>
+      <option value="general">General</option>
+      <option value="premium">Premium</option>
+      <option value="luxury">Luxury</option>
+    </select>
+  </section>
+
+  <!-- ===== GENERAL CARS ===== -->
+  <section class="cars-category" id="general" data-category="general">
+    <div class="category-header">
+      <h2>General Cars</h2>
+      <div class="cat-desc">
+        <span class="cat-dot"></span>
+        <p>Explore our diverse fleet of reliable and comfortable general cars, perfect for every journey. From compact efficiency to spacious convenience, find the ideal ride for your travel needs.</p>
+      </div>
+    </div>
+    <div class="cars-grid">
+
+      <div class="car-card" data-name="suzuki alto premium" data-type="general">
+        <div class="car-card-img">
+          <img src="8454e12babee7070cda4760eb3d2f72766ec819b.png" alt="Suzuki Alto Premium" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Suzuki Alto – Premium</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red active"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Manual</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="suzuki alto k10" data-type="general">
+        <div class="car-card-img">
+          <img src="68e6cb10abbfe3bd7a0462626c19a944ea2a778b.png" alt="Suzuki Alto K10" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Suzuki Alto K10</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue active"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="suzuki celerio" data-type="general">
+        <div class="car-card-img">
+          <img src="55470619766d6d177cf14c81217338df6126dd96.png" alt="Suzuki Celerio" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Suzuki Celerio</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white active"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="perodua daihatsu axia" data-type="general">
+        <div class="car-card-img">
+          <img src="256ecf4b627a973c44d56596d16ec58ef035a850.png" alt="Perodua Axia" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Perodua (Daihatsu) Axia</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red active"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="toyota prius c aqua" data-type="general">
+        <div class="car-card-img">
+          <img src="9bdf6dae3c5003edc7d3892a79bd431b9f52d0c1.png" alt="Toyota Prius C" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Toyota Prius C/ Aqua</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white active"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PREMIUM CARS ===== -->
+  <section class="cars-category" id="premium" data-category="premium">
+    <div class="category-header">
+      <h2>Premium Cars</h2>
+      <div class="cat-desc">
+        <span class="cat-dot"></span>
+        <p>Elevate your travel experience with our exclusive fleet of premium cars. From luxurious sedans to high-performance SUVs, explore the epitome of comfort and style for an unforgettable journey.</p>
+      </div>
+    </div>
+    <div class="cars-grid">
+
+      <div class="car-card" data-name="toyota corolla axio nze141" data-type="premium">
+        <div class="car-card-img">
+          <img src="619710193cd4ca873ff9d420f236df5426608ea8.png" alt="Toyota Corolla Axio" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Toyota Corolla Axio/ NZE141</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 16,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red active"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="perodua bezza prime sedan 2017" data-type="premium">
+        <div class="car-card-img">
+          <img src="ca2eb54724d31825172cb98d052e30b833fdb921.png" alt="Perodua Bezza" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Perodua Bezza Prime Sedan(2017)</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue active"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="toyota allion nzt260" data-type="premium">
+        <div class="car-card-img">
+          <img src="414c01eba0123b9fb2cea4f0941ad232a7ede472.png" alt="Toyota Allion" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Toyota Allion NZT 260</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 16,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red active"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="toyota axio nkr 165" data-type="premium">
+        <div class="car-card-img">
+          <img src="f863a030cf276bcdf4909df01df53e6f4d749645 (1).png" alt="Toyota Axio NKR 165" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Toyota Axio NKR 165</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white active"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="toyota axio nkr 165 red" data-type="premium">
+        <div class="car-card-img">
+          <img src="8454e12babee7070cda4760eb3d2f72766ec819b (1).png" alt="Toyota Axio NKR 165" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Toyota Axio NKR 165</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red active"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LUXURY CARS ===== -->
+  <section class="cars-category" id="luxury" data-category="luxury">
+    <div class="category-header">
+      <h2>Luxury Cars</h2>
+      <div class="cat-desc">
+        <span class="cat-dot"></span>
+        <p>Indulge in Opulence: Explore Our Fleet of Exquisite Luxury Cars. Elevate Your Travel Experience with Unparalleled Comfort and Style.</p>
+      </div>
+    </div>
+    <div class="cars-grid">
+
+      <div class="car-card" data-name="bmw i8 special edition" data-type="luxury">
+        <div class="car-card-img">
+          <img src="d765899ef1552816bfdb76f25d5f8649a17487cf (1).png" alt="BMW i8" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>BMW i8 Special Edition</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white active"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="mercedes-benz cls coupe" data-type="luxury">
+        <div class="car-card-img">
+          <img src="1d560b0484c6f54c992e706aa61e66f954dcf72f (1).png" alt="Mercedes-Benz CLS" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Mercedes-Benz CLS Coupe</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 300,000 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 18,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 100.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white"></span>
+            <span class="tone-dot red active"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+      <div class="car-card" data-name="toyota premio" data-type="luxury">
+        <div class="car-card-img">
+          <img src="7dd5c869ccb7a0bd7cda37e2e719cafd544d978e.png" alt="Toyota Premio" onerror="this.style.opacity='0.2'"/>
+        </div>
+        <div class="car-card-info">
+          <h3>Toyota Premio</h3>
+          <div class="car-prices">
+            <span class="price-monthly">Rs 175,230 <small>Monthly Rate</small></span>
+            <span class="price-line">Rs 6,000 <small>Daily Rate</small></span>
+            <span class="price-line">Rs 65.00 <small>Price per Extra Km</small></span>
+          </div>
+          <div class="tone-row">
+            <span class="tone-label">Tone</span>
+            <span class="tone-dot white active"></span>
+            <span class="tone-dot red"></span>
+            <span class="tone-dot blue"></span>
+            <span class="tone-dot dark"></span>
+          </div>
+          <div class="car-specs">
+            <span><i class="fas fa-user"></i> Seats 4</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            <span class="spec-sep">|</span>
+            <span><i class="fas fa-cog"></i> Automatic</span>
+          </div>
+          <a href="#" class="btn-primary full-width">Book Now &nbsp;→</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== THANK YOU ===== -->
+  <section class="thankyou-section">
+    <p class="thankyou-text">
+      <strong>"Thank you</strong> for exploring our website! We appreciate your time.<br/>
+      For any inquiries or assistance, <strong>feel free to contact us. Safe travels!"</strong>
+    </p>
+    <div class="thankyou-divider"></div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section">
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-phone"></i></div>
+      <p class="contact-label">Telephone</p>
+      <p class="contact-value">+9411 234 1354</p>
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+      <p class="contact-label">Email</p>
+      <p class="contact-value">info@easycarrental.com</p>
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <p class="contact-label">No. 200, Galle<br/>Road, Panadura</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-circle">
+          <img src="03897dafe1c7c800366df31232d11df9293169e2.png" alt="Logo" onerror="this.style.display='none'"/>
+        </div>
+        <span class="footer-brand-name">Easy Car Rental Pvt Ltd</span>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul>
+          <li><span class="footer-dot"></span><a href="#">Reservations</a></li>
+          <li><span class="footer-dot"></span><a href="#">Deals</a></li>
+          <li><span class="footer-dot"></span><a href="#">About Us</a></li>
+          <li><span class="footer-dot"></span><a href="#">Contact Details</a></li>
+        </ul>
+      </div>
+      <div class="footer-sep"></div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><span class="footer-dot purple"></span><a href="#">info@easycarrental.com</a></li>
+          <li><span class="footer-dot purple"></span><a href="#">No. 200, Galle Road, Panadura.</a></li>
+          <li><span class="footer-dot purple"></span><a href="#">+9411 234 1354</a></li>
+        </ul>
+      </div>
+      <div class="footer-sep"></div>
+      <div class="footer-col">
+        <h4>Follow us</h4>
+        <div class="footer-socials">
+          <a href="#" class="social-fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-ig"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-tw"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-wa"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Developed By Sehan Ranaweera©</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterCars() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const type  = document.getElementById('typeSelect').value.toLowerCase();
+
+      const cards = document.querySelectorAll('.car-card');
+      cards.forEach(card => {
+        const name     = card.getAttribute('data-name').toLowerCase();
+        const cardType = card.getAttribute('data-type').toLowerCase();
+        const matchSearch = name.includes(query);
+        const matchType   = type === '' || cardType === type;
+        card.style.display = (matchSearch && matchType) ? 'flex' : 'none';
+      });
+
+      // hide/show entire category sections if all cards in them are hidden
+      document.querySelectorAll('.cars-category').forEach(section => {
+        const visible = [...section.querySelectorAll('.car-card')]
+          .some(c => c.style.display !== 'none');
+        section.style.display = visible ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

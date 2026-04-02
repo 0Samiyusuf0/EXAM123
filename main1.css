@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #d0d0d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 780px;
+    min-height: 430px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    background: #e8e8ee;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 340px;
+    background: linear-gradient(160deg, #7b2abf 0%, #4a0080 60%, #2d0050 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 38px 24px 0 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-title {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.brand-subtitle {
+    color: #e0c8ff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.brand-subtitle strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.car-wrap {
+    position: absolute;
+    bottom: -18px;
+    left: -30px;
+    width: 390px;
+}
+
+.car-wrap img {
+    width: 100%;
+    display: block;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    flex: 1;
+    background: #e8e8ee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 44px 44px 36px 44px;
+}
+
+.login-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.login-desc {
+    font-size: 12.5px;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 26px;
+    max-width: 230px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    background: #f4f4f8;
+    font-size: 13.5px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #ffffff;
+}
+
+.form-group input:focus {
+    border-color: #7b2abf;
+    background: #fff;
+}
+
+.forgot {
+    width: 100%;
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 18px;
+}
+
+.forgot a {
+    font-size: 11.5px;
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot a:hover { color: #7b2abf; text-decoration: underline; }
+
+.btn-signin {
+    width: 100%;
+    padding: 11px;
+    background: #7b2abf;
+    color: #ffeeee;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    margin-bottom: 18px;
+}
+
+.btn-signin:hover { background: #5e1d96; }
+
+.signup-text { font-size: 12.5px; color: #555; }
+
+.signup-text a {
+    color: #7b2abf;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.signup-text a:hover { text-decoration: underline; }
+
+/* ===== BACKGROUND THEMES ===== */
+
+/* Использование: добавь класс на <body> */
+
+/* Тёмная тема */
+body.bg-dark {
+    background-color: #1a1a2e;
+}
+
+/* Светло-серая (по умолчанию уже стоит) */
+body.bg-light {
+    background-color: #d0d0d8;
+}
+
+/* Градиент фиолетовый */
+body.bg-purple {
+    background: linear-gradient(135deg, #2d0050 0%, #7b2abf 100%);
+}
+
+/* Градиент синий */
+body.bg-blue {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+/* Градиент закат */
+body.bg-sunset {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+}
+
+/* Чёрный */
+body.bg-black {
+    background-color: #0d0d0d;
+}
+
+/* Белый */
+body.bg-white {
+    background-color: #f0f0f0;
+}
+
+/* Кастомный цвет — задай через JS: document.body.style.background = '...' */
+body.bg-custom {
+    /* задаётся динамически */
+}
